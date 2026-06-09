@@ -102,8 +102,9 @@
     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
     <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
     <li class="nav-item"><a class="nav-link" href="#impact">Applied Research</a></li>
-    <li class="nav-item"><a class="nav-link" href="#publications">Knowledge Output</a></li> <!-- Προσθήκη εδώ -->
-    <li class="nav-item"><a class="nav-link" href="#people">People</a></li>
+    <li class="nav-item"><a class="nav-link" href="#publications">Knowledge Output</a></li>
+<li class="nav-item"><a class="nav-link" href="#alpha-bank">Industry Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#people">People</a></li>
 </ul>
             </div>
         </div>
@@ -244,7 +245,7 @@
     <!-- Alpha Bank Project -->
  <!-- Alpha Bank Strategic Projects -->
 
-<section class="section-padding bg-light">
+<section id="alpha-bank" class="section-padding bg-light">
     <div class="container">
         <div class="project-box shadow-lg" data-aos="zoom-in">
             <div class="row align-items-center">
@@ -378,5 +379,20 @@
     <!-- AOS Animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 1000, once: true });</script>
+    <script>
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+
+                bsCollapse.hide();
+            }
+        });
+    });
+</script>
 </body>
 </html>
